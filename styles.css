@@ -258,6 +258,17 @@ p{line-height:1.7}
 .legal-endnote p{margin-bottom:10px;color:var(--body);font-size:15px}
 .legal-footer{border-top:1px solid var(--line)}
 .legal-footer .footer-main{padding-top:38px;padding-bottom:34px}
+.faq-page .legal-intro{position:relative;max-width:none;min-height:320px;padding-right:240px}
+.faq-page .legal-intro>p:not(.eyebrow){max-width:630px}
+.faq-hero-cat{position:absolute;right:18px;bottom:12px;width:205px;max-height:255px;object-fit:contain}
+.faq-page .legal-content section{margin-bottom:46px;padding-bottom:0;border-bottom:0}
+.faq-page .legal-content h2{margin-bottom:19px}
+.faq-page .faq-list summary{padding:20px 3px;font-size:17px;line-height:1.4}
+.faq-page .faq-list details p{margin:0 52px 23px 3px;font-size:15px;line-height:1.75}
+.faq-page .faq-list details p+p{margin-top:-10px}
+.faq-page .faq-list details a{color:var(--green);text-decoration:underline;text-underline-offset:4px}
+.faq-page .legal-endnote{padding-top:5px}
+.faq-more{margin-top:31px}
 @media(max-width:850px){
   .legal-layout{grid-template-columns:190px minmax(0,1fr);gap:30px}
   .legal-toc{padding:21px 18px}
@@ -273,4 +284,8 @@ p{line-height:1.7}
   .legal-content section p,.legal-content li{font-size:15px}
   .legal-content section{margin-bottom:26px;padding-bottom:26px}
   .legal-footer .footer-main{padding-top:30px;padding-bottom:25px}
+  .faq-page .legal-intro{min-height:0;padding-right:0}
+  .faq-hero-cat{display:none}
+  .faq-page .faq-list summary{font-size:16px}
+  .faq-page .faq-list details p{margin-right:45px;font-size:14px}
 }
