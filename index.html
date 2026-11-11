@@ -1,46 +1,82 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="syntax_folio">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>syntax_folio</title>
-  <link rel="manifest" href="manifest.json">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7fbf7">
+  <meta name="description" content="Syntax Folio turns finding words into a little everyday adventure. Pick a world, finish a sentence, and collect charming cat badges along the way.">
+  <meta property="og:title" content="Syntax Folio — Make a little word magic">
+  <meta property="og:description" content="Pick a world, find the words, and make a little magic.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+  <title>Syntax Folio — Make a little word magic</title>
 </head>
 <body>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
-
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
-  <script src="flutter_bootstrap.js" async></script>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="nav-shell page-width">
+      <a class="brand" href="#top" aria-label="Syntax Folio, back to top"><span class="brand-mark" aria-hidden="true"><img src="./assets/syntaxfolio_cat_green.png" alt=""></span><span>syntax<span class="brand-accent">folio</span><span class="brand-period">.</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#worlds">Explore worlds</a><a href="#badges">Badges</a><a href="#progress">Your progress</a><a href="#faq">FAQ</a></nav>
+      <a class="button button-dark nav-cta" href="#how-it-works">Meet the game <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-spark hero-spark-one" aria-hidden="true">✳</div><div class="hero-spark hero-spark-two" aria-hidden="true">✦</div>
+      <div class="hero-intro page-width">
+        <h1 id="hero-title">Words are more fun<br>when they <em>click.</em></h1>
+        <p class="hero-copy">Pick a world. Find the right words. Make a little magic, one sentence at a time.</p>
+        <div class="hero-actions"><a class="button button-green" href="#how-it-works">See how it works <span aria-hidden="true">↗</span></a><a class="text-link" href="#worlds">Explore the worlds <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <div class="hero-stage page-width" aria-label="Preview of the Syntax Folio game">
+        <span class="hero-blob hero-blob-left" aria-hidden="true"></span><span class="hero-blob hero-blob-right" aria-hidden="true"></span>
+        <span class="floating-tile tile-one" aria-hidden="true">A</span><span class="floating-tile tile-two" aria-hidden="true">✦</span><span class="floating-tile tile-three" aria-hidden="true">Z</span>
+        <img class="hero-cat hero-cat-left" src="./assets/cat-hello.webp" alt="The Syntax Folio cat waving hello while holding a phone" width="420" height="560" fetchpriority="high">
+        <img class="hero-cat hero-cat-right" src="./assets/cat-reading.webp" alt="The Syntax Folio cat reading a book while sitting on stones" width="370" height="500">
+        <div class="hero-sticker sticker-one" aria-hidden="true">OH, HELLO!</div><div class="hero-sticker sticker-two" aria-hidden="true">WORD MAGIC ✳</div>
+      </div>
+      <div class="phone phone-hero"><video src="./assets/preview.mp4" poster="./assets/preview-poster.webp" aria-label="Gameplay preview: find words to finish a sentence" autoplay muted loop playsinline preload="metadata"></video></div>
+      <div class="ticker" aria-hidden="true"><div class="ticker-track">FIND IT <span>✦</span> TAP IT <span>✦</span> LOVE IT <span>✦</span> FIND IT <span>✦</span> TAP IT <span>✦</span> LOVE IT <span>✦</span> FIND IT <span>✦</span> TAP IT <span>✦</span> LOVE IT <span>✦</span></div></div>
+    </section>
+    <section class="section how-section page-width" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-heading centered"><h2 id="how-title">A sentence away<br>from <span class="underlined">something lovely.</span></h2><p>No long lessons. No pressure to be perfect. Just a satisfying little game that makes every word count.</p></div>
+      <div class="steps-grid">
+        <article class="step-card step-mint"><div class="step-number">01 / PICK</div><div class="step-art step-art-world">
+          <div class="mini-world mini-world-green"><svg class="category-wave" viewBox="0 0 100 100" aria-hidden="true"><path d="M0 0 C20 19 20 30 43 43 C64 57 74 78 100 100 L100 0 Z"></path></svg><span class="material-icon category-icon" aria-hidden="true">&#xf0322;</span><strong>Nature<br>&amp; World</strong><small>100 Phase</small><i class="mini-track" aria-hidden="true"></i></div>
+          <div class="mini-world mini-world-pink"><svg class="category-wave" viewBox="0 0 100 100" aria-hidden="true"><path d="M0 0 C16 27 27 30 40 43 C58 64 81 77 100 100 L100 0 Z"></path></svg><span class="material-icon category-icon" aria-hidden="true">&#xf738;</span><strong>Love &amp;<br>Friendship</strong><small>100 Phase</small><i class="mini-track" aria-hidden="true"></i></div>
+          <div class="mini-world mini-world-yellow"><svg class="category-wave" viewBox="0 0 100 100" aria-hidden="true"><path d="M0 0 C26 10 22 28 45 40 C65 50 68 73 100 100 L100 0 Z"></path></svg><span class="material-icon category-icon" aria-hidden="true">&#xf02ae;</span><strong>Everyday<br>Life</strong><small>100 Phase</small><i class="mini-track" aria-hidden="true"></i></div>
+        </div><h3>Choose your world.</h3><p>Follow your curiosity into a category that feels like you.</p></article>
+        <article class="step-card step-cream"><div class="step-number">02 / PLAY</div><div class="step-art word-art" aria-hidden="true"><span>The</span><span class="word-highlight">little</span><span>things</span><span class="word-choice">little ✓</span><span class="word-choice faded">wonder</span></div><h3>Find the words.</h3><p>Spot each word and bring the sentence to life.</p></article>
+        <article class="step-card step-pink"><div class="step-number">03 / GROW</div><div class="step-art reward-art" aria-hidden="true"><span class="reward-sun">✦</span><img src="./assets/badge-first-purr.webp" alt="" width="155" height="155"><span class="reward-star">★</span></div><h3>Keep the little wins.</h3><p>Finish phases, collect badges, and see how far you’ve come.</p></article>
+      </div>
+    </section>
+    <section class="worlds-section section" id="worlds" aria-labelledby="worlds-title"><div class="page-width worlds-layout">
+      <div class="worlds-copy"><h2 id="worlds-title">Pick a world.<br><em>Get wonderfully lost.</em></h2><p>From quiet forests to faraway places, every category has its own color, mood, and little surprises.</p><a class="button button-green" href="#progress">See what’s next <span aria-hidden="true">↗</span></a></div>
+      <div class="worlds-art" aria-label="A selection of colorful categories">
+        <div class="world-card world-green"><svg class="category-wave" viewBox="0 0 100 100" aria-hidden="true"><path d="M0 0 C20 19 20 30 43 43 C64 57 74 78 100 100 L100 0 Z"></path></svg><span class="material-icon category-icon" aria-hidden="true">&#xf0322;</span><strong>Nature &amp; World</strong><small>Find your wild.</small><div class="category-progress"><span>5 / 100 Phase</span><i><b style="width:5%"></b></i></div></div>
+        <div class="world-card world-yellow"><svg class="category-wave" viewBox="0 0 100 100" aria-hidden="true"><path d="M0 0 C26 10 22 28 45 40 C65 50 68 73 100 100 L100 0 Z"></path></svg><span class="material-icon category-icon" aria-hidden="true">&#xf02ae;</span><strong>Everyday Life</strong><small>Magic in the ordinary.</small><div class="category-progress"><span>2 / 100 Phase</span><i><b style="width:2%"></b></i></div></div>
+        <div class="world-card world-pink"><svg class="category-wave" viewBox="0 0 100 100" aria-hidden="true"><path d="M0 0 C16 27 27 30 40 43 C58 64 81 77 100 100 L100 0 Z"></path></svg><span class="material-icon category-icon" aria-hidden="true">&#xf738;</span><strong>Love &amp; Friendship</strong><small>Words that bring us closer.</small><div class="category-progress"><span>2 / 100 Phase</span><i><b style="width:2%"></b></i></div></div>
+        <div class="world-card world-blue"><svg class="category-wave" viewBox="0 0 100 100" aria-hidden="true"><path d="M0 0 C24 13 26 38 50 54 C72 69 77 83 100 100 L100 0 Z"></path></svg><span class="material-icon category-icon" aria-hidden="true">&#xf724;</span><strong>Travel &amp; Adventure</strong><small>Let curiosity lead.</small><div class="category-progress"><span>0 / 100 Phase</span><i><b style="width:0%"></b></i></div></div>
+      </div>
+    </div></section>
+    <section class="badges-section section" id="badges" aria-labelledby="badges-title"><div class="page-width badges-layout">
+      <div class="badges-copy"><h2 id="badges-title">Big love for<br><em>little victories.</em></h2><p>Every finished phase has a story. Collect delightful enamel-style badges and make your journey your own.</p><a class="button button-light" href="#progress">More to discover <span aria-hidden="true">↗</span></a></div>
+      <div class="badge-scene" aria-label="A collection of Syntax Folio badges"><span class="badge-orbit" aria-hidden="true"></span><img class="badge badge-a" src="./assets/badge-first-purr.webp" alt="First Purr badge" loading="lazy"><img class="badge badge-b" src="./assets/badge-word-weaver.webp" alt="Word Weaver badge" loading="lazy"><img class="badge badge-c" src="./assets/badge-moonlit-whiskers.webp" alt="Moonlit Whiskers badge" loading="lazy"><img class="badge badge-d" src="./assets/badge-lucky-clover.webp" alt="Lucky Clover badge" loading="lazy"><img class="badge badge-e" src="./assets/badge-aurora-admirer.webp" alt="Aurora Admirer badge" loading="lazy"><img class="badges-cat" src="./assets/cat-celebrate.webp" alt="The cat celebrating with a golden badge" loading="lazy"></div>
+    </div></section>
+    <section class="section progress-section page-width" id="progress" aria-labelledby="progress-title">
+      <div class="progress-visual"><div class="progress-blob" aria-hidden="true"></div><div class="phone phone-progress phone-progress-back"><span class="phone-camera" aria-hidden="true"></span><img src="./assets/screen-6.webp" alt="Leaderboard preview" loading="lazy" width="680" height="1471"></div><div class="phone phone-progress phone-progress-front"><span class="phone-camera" aria-hidden="true"></span><img src="./assets/screen-5.webp" alt="Growth and progress preview" loading="lazy" width="680" height="1471"></div><span class="progress-sticker" aria-hidden="true">LOOK AT YOU! ★</span></div>
+      <div class="progress-copy"><h2 id="progress-title">Your journey<br>looks good <em>on you.</em></h2><p>See your progress grow, revisit your records, and climb the leaderboard at your own pace.</p><div class="progress-chips"><span>✦ Growth</span><span>◉ Journeys</span><span>★ Leaderboard</span></div></div>
+    </section>
+    <section class="faq-section section" id="faq" aria-labelledby="faq-title"><div class="page-width faq-layout">
+      <div class="faq-intro"><h2 id="faq-title">A few little<br><em>answers.</em></h2><img src="./assets/cat-hello.webp" alt="Our cat is happy to help" loading="lazy"></div>
+      <div class="faq-list"><details><summary>What is Syntax Folio?<span aria-hidden="true">+</span></summary><p>It’s a word-finding game where you complete sentences, explore themed worlds, and celebrate your progress along the way.</p></details><details><summary>How do I play?<span aria-hidden="true">+</span></summary><p>Choose a category and phase, then tap the correct words in order to complete the sentence. Each phase is a fresh little challenge.</p></details><details><summary>Can I play at my own pace?<span aria-hidden="true">+</span></summary><p>Absolutely. Pick a world whenever you like and return to your journey whenever a little wordplay sounds good.</p></details><details><summary>What are badges for?<span aria-hidden="true">+</span></summary><p>Badges mark the milestones you reach as you play. Collect them and watch your own story take shape.</p></details></div>
+    </div></section>
+    <section class="final-cta" aria-labelledby="final-title"><div class="page-width final-inner"><span class="final-star final-star-a" aria-hidden="true">✦</span><span class="final-star final-star-b" aria-hidden="true">✳</span><h2 id="final-title">Let’s make a little<br><em>word magic.</em></h2><p>Your next favorite sentence is waiting.</p><a class="button button-light" href="#top">Back to the beginning <span aria-hidden="true">↑</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-main"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><img src="./assets/syntaxfolio_cat_green.png" alt=""></span><span>syntax<span class="brand-accent">folio</span><span class="brand-period">.</span></span></a><nav aria-label="Footer navigation"><a href="#how-it-works">How it works</a><a href="#worlds">Worlds</a><a href="#badges">Badges</a><a href="#progress">Progress</a><a href="#faq">FAQ</a><a href="./privacy/">Privacy</a><a href="./terms/">Terms</a></nav></div><div class="footer-bottom page-width"><span>© <span id="year">2026</span> Syntax Folio</span><a href="#top">Back to top ↑</a></div></footer>
 </body>
 </html>
